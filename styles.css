@@ -1,0 +1,256 @@
+body {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background: black;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: rgb(201, 29, 29);
+  }
+  
+  .header {
+    width: 100vw;
+    height: 128px;
+    background: rgb(0, 255, 17);
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #title {
+    font-size: 3rem;
+    text-shadow: #ff0000 2px 2px 4px;
+    margin-bottom: -6px;
+    z-index: 100;
+  }
+  
+  #description {
+    text-align: center;
+    color: #ffffffcc;
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 50;
+  }
+  
+  #description * {
+    color: #767676;
+    font-size: 1.25rem;
+  }
+  
+  ::placeholder {
+    color: #8a4c4cd9;
+    opacity: 1;
+  }
+  
+  dialog {
+    position: fixed;
+    top: 48px;
+    left: auto;
+    border: 1;
+    padding: 8px;
+    height: auto;
+    border-radius: 8px;
+    background: #e3080825;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    text-shadow: #ff0000 2px 2px 4px;
+  }
+  
+  input {
+    font-size: 1rem;
+    padding: 2px 6px;
+    margin: 2px 0;
+    background: #00000025;
+    color: #ffffffd5;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  input:focus {
+    background: #00000050;
+    outline: none;
+  }
+  
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: #00000050;
+    transition: 0.25s;
+  }
+  
+  @media screen and (max-width: 800px) {
+    dialog {
+      padding: 6px;
+    }
+    input {
+      font-size: 0.75rem;
+      padding: 1.5px 4px;
+      margin: 1.5px 0;
+    }
+  }
+  
+  .code {
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px 4px;
+    background: #00000025 !important;
+    border-radius: 8px;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+    white-space: pre-wrap;
+  }
+  
+  .hidden {
+    display: none!important;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .header {
+      height: 96px;
+    }
+  
+    #title {
+      font-size: 2.5rem;
+      text-shadow: #ed080825 1px 1px 2px;
+      margin-bottom: -4px;
+    }
+  
+    #description {
+      font-size: 1.25rem;
+    }
+  
+    #description * {
+      font-size: 1rem;
+    }
+  
+    input {
+      border-radius: 6px;
+    }
+  }
+  
+  /* main */
+  #search-btn {
+    position: fixed;
+    top: 0;
+    right: 2px;
+    cursor: pointer;
+  }
+  
+  #additional {
+    color: #ff0000;
+    margin: 8px 0 0 8px;
+    text-decoration:solid;
+  }
+  
+  #blogs-container {
+    padding: 8px;
+  }
+  
+  .blog {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #54161625;
+    border-radius: 8px;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .blog-description {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin: 4px 8px;
+  }
+  
+  .blog-date {
+    font-weight: 300;
+    color: #ab2222;
+    font-size: 1rem;
+    margin: 8px 0 -4px 0;
+  }
+  
+  .blog-delete {
+    color: #ab2222;
+    font-size: 1rem;
+    margin: 16px 0 -16px 4px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .blog {
+      margin-bottom: 8px;
+      padding: 8px;
+    }
+  
+    .blog-title {
+      font-size: 1.25rem;
+    }
+  
+    .blog-description {
+      font-size: 1rem;
+      margin: 2px 4px;
+    }
+  
+    .blog-date {
+      font-size: 0.75rem;
+      margin-top: 4px 0 -2px 0;
+    }
+  
+    .blog-delete {
+      font-size: 0.5rem;
+      margin: 12px 0 -16px 2px;
+    }
+  }
+  
+  /* admin */
+  #admin-btn {
+    position: fixed;
+    top: 4px;
+    right: 28px;
+    cursor: pointer;
+  }
+  
+  /* views */
+  #views {
+    position: fixed;
+    top: 4px;
+    right: 60px;
+    font-size: 1.25rem;
+    cursor: help;
+  }
+  
+  @media screen and (max-width: 10px) {
+    #views {
+      font-size: 0rem;
+      top: 4px;
+    }
+  }
+ /* styles.css */
+
+ /* Add these styles for the search text field */
+ #search {
+   position: fixed;
+   top: 20px;
+   right: 36px;
+   bottom: 20px;
+ 
+
+ }
+
+ #search-input {
+   padding: 8px;
+   width: 200px; /* Adjust the width as needed */
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   margin-right: 4px;
+ }
