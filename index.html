@@ -14,11 +14,9 @@
 <body>
   <header class="header">
     <h1 id="title">My blogs</h1>
-    
   </header>
 
   <p id="views" title="Total Views"></p>
-  <span id="search-btn"></span>
   <span id="admin-btn" class="material-symbols-outlined">edit</span>
 
   <dialog id="admin-blogs-add">
@@ -34,6 +32,11 @@
     </form>
   </dialog>
 
+  <div id="search">
+    <input id="search-input" class="material-symbols-outlined" type="text" placeholder="search"
+      oninput="searchBlogs(this.value)" />
+  </div>
+
   <p id="additional"></p>
   <div id="blogs-container">
     <p>загрузка . . .</p>
@@ -41,27 +44,27 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-        import {
-          getDatabase,
-          ref,
-          set,
-          get,
-          update,
-          remove,
-          DataSnapshot,
-        } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
-  
-  
-  const firebaseConfig = {
-     apiKey: "AIzaSyA7TXV-QdtoiESNU9Sm5Z5g9aORoEENqU0",
-     authDomain: "batata-f3f79.firebaseapp.com",
-     databaseURL: "https://batata-f3f79-default-rtdb.firebaseio.com",
-     projectId: "batata-f3f79",
-     storageBucket: "batata-f3f79.appspot.com",
-     messagingSenderId: "234266689368",
-     appId: "1:234266689368:web:e88096638e0b2c032baf2d",
-     measurementId: "G-CSLTNPZDP2"
-  };
+    import {
+      getDatabase,
+      ref,
+      set,
+      get,
+      update,
+      remove,
+      DataSnapshot,
+    } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA7TXV-QdtoiESNU9Sm5Z5g9aORoEENqU0",
+      authDomain: "batata-f3f79.firebaseapp.com",
+      databaseURL: "https://batata-f3f79-default-rtdb.firebaseio.com",
+      projectId: "batata-f3f79",
+      storageBucket: "batata-f3f79.appspot.com",
+      messagingSenderId: "234266689368",
+      appId: "1:234266689368:web:e88096638e0b2c032baf2d",
+      measurementId: "G-CSLTNPZDP2"
+    };
 
     const app = initializeApp(firebaseConfig);
     window.db = {
@@ -72,13 +75,8 @@
       upd: update,
       rem: remove
     }
-   </script>
-   <script src="main.js"></script>
-   <!-- Add this in your <body> section, right after the <header> element -->
-   <div id="search">
-   
-   <input type="text" name="title" placeholder="поиск..." />
-  </div>
+  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
